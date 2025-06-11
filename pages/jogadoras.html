@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadoras - Arena Delas</title>
+    <link rel="stylesheet" href="../src/assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../src/assets/imgs/logo.png" alt="Logo Arena Delas"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="./jogadoras.html" class="active">Jogadoras</a></li>
+                    <li><a href="./noticias.html">Notícias</a></li>
+                    <li><a href="./clubes.html">Clubes</a></li>
+                    <li><a href="./comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Encontre Jogadoras</h1>
+                <p>Navegue pelos perfis e descubra o talento do futebol feminino.</p>
+            </div>
+        </section>
+
+        <section class="form-section player-signup-section">
+            <div class="container form-container">
+                <h2>É Jogadora? Cadastre-se!</h2>
+                <p>Crie seu perfil na Arena Delas, mostre seu talento para clubes de todo o Brasil e dê o próximo passo na sua carreira.</p>
+                <form>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="player-name">Seu Nome</label>
+                            <input type="text" id="player-name" name="player-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="player-position">Sua Posição Principal</label>
+                            <input type="text" id="player-position" name="player-position" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="player-qualities">Suas Principais Qualidades (separadas por vírgula)</label>
+                        <input type="text" id="player-qualities" name="player-qualities" placeholder="Ex: Velocidade, Drible, Finalização">
+                    </div>
+                    <div class="form-group">
+                        <label for="player-bio">Fale sobre você e sua carreira</label>
+                        <textarea id="player-bio" name="player-bio" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Criar meu Perfil</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="player-gallery">
+            <div class="container">
+                <div class="player-grid">
+                    <div class="player-card">
+                        <img src="../src/assets/imgs/player1.png" alt="Foto da Jogadora" class="player-photo">
+                        <div class="player-info">
+                            <h3>Ana Silva</h3>
+                            <p class="player-position">Atacante</p>
+                            <p class="player-bio">Finalização precisa e velocidade são minhas maiores qualidades. Buscando um novo desafio.</p>
+                            <button class="cta-button-small view-profile-btn" data-player-id="1">Ver Perfil</button>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="../src/assets/imgs/player2.png" alt="Foto da Jogadora" class="player-photo">
+                        <div class="player-info">
+                            <h3>Beatriz Costa</h3>
+                            <p class="player-position">Meio-Campo</p>
+                            <p class="player-bio">Visão de jogo e passes decisivos. Experiência em campeonatos estaduais e nacionais.</p>
+                            <button class="cta-button-small view-profile-btn" data-player-id="2">Ver Perfil</button>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="../src/assets/imgs/player3.png" alt="Foto da Jogadora" class="player-photo">
+                        <div class="player-info">
+                            <h3>Carla Mendes</h3>
+                            <p class="player-position">Zagueira</p>
+                            <p class="player-bio">Liderança em campo e forte na marcação. Capitã por 3 temporadas no último clube.</p>
+                            <button class="cta-button-small view-profile-btn" data-player-id="3">Ver Perfil</button>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="../src/assets/imgs/player4.png" alt="Foto da Jogadora" class="player-photo">
+                        <div class="player-info">
+                            <h3>Daniela Rocha</h3>
+                            <p class="player-position">Goleira</p>
+                            <p class="player-bio">Ótimos reflexos e segurança no gol. Especialista em defender pênaltis.</p>
+                            <button class="cta-button-small view-profile-btn" data-player-id="4">Ver Perfil</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="player-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <img src="" alt="Foto da Jogadora" id="modal-player-photo" class="modal-player-photo">
+                <div class="modal-player-info">
+                    <h2 id="modal-player-name">Nome da Jogadora</h2>
+                    <p id="modal-player-position" class="modal-player-position">Posição</p>
+                    <h3>Principais Qualidades:</h3>
+                    <ul id="modal-player-qualities" class="qualities-list">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Arena Delas. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../src/JS/script.js" defer></script>
+</body>
+</html>

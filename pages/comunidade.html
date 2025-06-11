@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade - Arena Delas</title>
+    <link rel="stylesheet" href="../src/assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../src/assets/imgs/logo.png" alt="Logo Arena Delas"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="./jogadoras.html">Jogadoras</a></li>
+                    <li><a href="./noticias.html">Notícias</a></li>
+                    <li><a href="./clubes.html">Clubes</a></li>
+                    <li><a href="./comunidade.html" class="active">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Nossa Comunidade</h1>
+                <p>Participe das discussões, debata e opine sobre o futebol feminino.</p>
+            </div>
+        </section>
+
+        <section class="community-content">
+            <div class="container community-grid">
+                <div class="forum-section">
+                    <h2>Fóruns de Discussão</h2>
+                    <ul class="forum-list">
+                        <li class="forum-item">
+                            <a href="#">
+                                <h3>Debate Tático</h3>
+                                <p>Análises sobre esquemas, formações e estratégias das equipes.</p>
+                                <span>32 tópicos</span>
+                            </a>
+                        </li>
+                        <li class="forum-item">
+                            <a href="#">
+                                <h3>Mercado da Bola</h3>
+                                <p>Rumores, transferências e tudo sobre a movimentação das jogadoras.</p>
+                                <span>57 tópicos</span>
+                            </a>
+                        </li>
+                        <li class="forum-item">
+                            <a href="#">
+                                <h3>Seleção Brasileira</h3>
+                                <p>Convocações, amistosos e o caminho para a próxima Copa do Mundo.</p>
+                                <span>41 tópicos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="poll-section">
+                    <h2>Enquete da Semana</h2>
+                    <div class="poll-card">
+                        <h3>Qual foi o gol mais bonito da última rodada do Brasileirão?</h3>
+                        <form id="poll-form">
+                            <label><input type="radio" name="poll" value="1"> Gol de falta da Ana Silva (São Paulo Fúria FC)</label>
+                            <label><input type="radio" name="poll" value="2"> Voleio da Beatriz Costa (Rio Pássaros Azuis)</label>
+                            <label><input type="radio" name="poll" value="3"> Chute de fora da área da Carla Mendes (Minas Leoas)</label>
+                            <label><input type="radio" name="poll" value="4"> Cabeçada da artilheira (Bahia Tempestade)</label>
+                            <label><input type="radio" name="poll" value="5"> Outro</label>
+                            <button type="submit" class="cta-button-small">Votar</button>
+                            <p id="vote-message" class="vote-success-msg"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Arena Delas. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../src/JS/script.js" defer></script>
+</body>
+</html>
