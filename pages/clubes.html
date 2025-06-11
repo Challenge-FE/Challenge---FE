@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clubes - Arena Delas</title>
-    <link rel="stylesheet" href="../src/assets/CSS/style.css">
+    <title>Cadastro de Clubes - Arena Delas</title>
+    <link rel="stylesheet" href="/src/assets/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,39 +28,58 @@
     </header>
 
     <main>
-        <section class="page-title">
+        <section class="form-section">
             <div class="container">
-                <h1>Para Clubes e Olheiros</h1>
-                <p>Cadastre sua equipe e encontre os talentos que vão fazer a diferença.</p>
-            </div>
-        </section>
-
-        <section class="club-content">
-            <div class="container">
-                <div class="club-cta-box">
-                    <h2>Descubra a Próxima Geração de Estrelas</h2>
-                    <p>A Arena Delas é a maior plataforma de scouting focada no futebol feminino. Ao cadastrar seu clube, você tem acesso a uma base de dados completa, com filtros por posição, qualidades e histórico de atletas de todo o Brasil. Não perca a chance de montar um time campeão.</p>
-                    <a href="../pages/cadastroClube.html" class="cta-button">Cadastre seu Clube Agora</a>
-                </div>
-
-                <h2>Clubes Parceiros</h2>
-                <div class="club-grid">
-                    <div class="club-logo-card">
-                        <img src="../src/assets/imgs/club-logo1.png" alt="Logo do Clube">
-                    </div>
-                    <div class="club-logo-card">
-                        <img src="../src/assets/imgs/club-logo2.png" alt="Logo do Clube">
-                    </div>
-                    <div class="club-logo-card">
-                        <img src="../src/assets/imgs/club-logo3.png" alt="Logo do Clube">
-                    </div>
-                    <div class="club-logo-card">
-                        <img src="../src/assets/imgs/club-logo4.png" alt="Logo do Clube">
-                    </div>
+                <div class="form-container">
+                    <h2>Cadastre seu Clube</h2>
+                    <form id="club-registration-form">
+                        <div class="form-group">
+                            <label for="club-name">Nome do Clube</label>
+                            <input type="text" id="club-name" required>
+                        </div>
+                        
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="club-city">Cidade</label>
+                                <input type="text" id="club-city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="club-state">Estado</label>
+                                <input type="text" id="club-state" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="club-email">E-mail</label>
+                            <input type="email" id="club-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="club-phone">Telefone</label>
+                            <input type="tel" id="club-phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="club-description">Descrição do Clube</label>
+                            <textarea id="club-description" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Enviar Cadastro</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal de Sucesso -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Cadastro Concluído!</h2>
+            <p>Seu clube foi registrado com sucesso na Arena Delas. Em breve entraremos em contato.</p>
+            <button class="cta-button">Entendido</button>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -72,6 +91,7 @@
             </div>
         </div>
     </footer>
-    <script src="../src/JS/script.js" defer></script>
+    
+    <script src="/src/assets/JS/script.js"></script>
 </body>
 </html>
