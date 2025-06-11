@@ -472,7 +472,7 @@ header nav ul li a:hover, header nav ul li a.active {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 2000;
-    display: none;
+    display: none; /* Hidden by default, shown by JS */
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -515,7 +515,7 @@ header nav ul li a:hover, header nav ul li a.active {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #ff3b7f;
+    border: 4px solid #ff3b7f; /* Adjusted to match your cta-button-small color palette */
     flex-shrink: 0;
 }
 .modal-player-info {
@@ -527,16 +527,16 @@ header nav ul li a:hover, header nav ul li a.active {
     margin-bottom: 0;
 }
 .modal-player-position {
-    color: #ff3b7f;
+    color: #ff3b7f; /* Adjusted to match your cta-button color */
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
 .modal-player-info h3 {
-    color: #8a2be2;
+    color: #8a2be2; /* Adjusted to match your navigation active/hover color */
     margin-bottom: 10px;
     font-size: 1.1rem;
-    border-bottom: 2px solid #e8dff5;
+    border-bottom: 2px solid #e8dff5; /* A light purple, from .player-signup-section */
     padding-bottom: 5px;
 }
 .qualities-list {
@@ -547,12 +547,17 @@ header nav ul li a:hover, header nav ul li a.active {
     gap: 10px;
 }
 .qualities-list li {
-    background: #e8dff5;
-    color: #2c0153;
+    background: #e8dff5; /* A light purple, from .player-signup-section */
+    color: #2c0153; /* Dark purple, from headings */
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* This style should be present to hide qualities on the main page */
+.player-qualities-hidden {
+    display: none;
 }
 
 
@@ -606,10 +611,10 @@ footer .social-links a:hover {
         text-align: center;
     }
     .modal-player-info h3 {
-        text-align: left;
+        text-align: left; /* Keep qualities heading left-aligned for better readability if qualities wrap */
     }
     .qualities-list {
-        justify-content: center;
+        justify-content: center; /* Center qualities list items */
     }
     .community-grid {
         grid-template-columns: 1fr;
